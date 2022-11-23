@@ -1,6 +1,6 @@
 import { Schema } from "mongoose"
 import mongoose from "mongoose"
-
+import livrosRoutes from "../routes/livrosRoutes.js"
 
 const livroSchema = new Schema(
     { 
