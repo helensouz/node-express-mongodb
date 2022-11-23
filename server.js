@@ -1,5 +1,8 @@
-const http = require("http");
-const port = 3000
+import app from '././src/app.js'
+
+
+
+const port = process.env.PORT || 3000; 
 
 
 const rotas  = {
@@ -8,12 +11,12 @@ const rotas  = {
     '/autores': 'Listagem de autores'
 }
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'})
-    res.end(rotas[req.url])
-})
+// const server = http.createServer((req, res) => {
+//     res.writeHead(200, {'Content-Type': 'text/plain'})
+//     res.end(rotas[req.url])
+// })
 
 
-server.listen(port, () => {
+app.listen(port, () => {
     console.log(`server listening on port ${port}`)
 })
